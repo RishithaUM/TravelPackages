@@ -1,0 +1,55 @@
+
+### Add Tour Package 1
+POST http://localhost:8087/api/packages/add
+Authorization: Basic rishitha:rish
+Content-Type: application/json
+
+{
+  "destination": "mysore",
+  "price": 2500.0,
+  "duration": 2,
+  "description": "Visit Mysore Palace and Chamundi Hills"
+}
+
+### Add Tour Package 2
+POST http://localhost:8087/api/packages/add
+Authorization: Basic rachana:rach
+Content-Type: application/json
+
+{
+  "destination": "Coorg",
+  "price": 4500.0,
+  "duration": 3,
+  "description": "Enjoy coffee estates and Abbey Falls"
+}
+
+### Add Tour Package 3
+POST http://localhost:8087/api/packages/add
+Authorization: Basic rachana:rach
+Content-Type: application/json
+
+{
+  "destination": "Hampi",
+  "price": 3000.0,
+  "duration": 2,
+  "description": "Explore ancient ruins and temples"
+}
+
+
+### 2. Get All Packages
+GET http://localhost:8087/api/packages/all
+Authorization: Basic rachana:rach
+
+### 3. Delete Package (example ID: 1)
+DELETE http://localhost:8087/api/packages/delete/37
+Authorization: Basic rishitha:rish
+
+### 4. Filter Packages (destination + price range)
+GET http://localhost:8087/api/packages/filter?destination=mysore&minPrice=300&maxPrice=500000
+Authorization: Basic rachana:rach
+### 5. Search by Keyword
+GET http://localhost:8087/api/packages/search?keyword=palace
+Authorization: Basic rishitha:rish
+### 6. Get Package by ID
+GET http://localhost:8087/api/packages/2
+Authorization: Basic rishitha:rish
